@@ -1,0 +1,13 @@
+apiVersion: api/v1
+kind: Job
+metadata:
+  name: givemesomecredit-api-k8s 
+spec:
+  template:
+    spec:
+      containers:
+      - name: givemesomecredit-api
+        imagePullPolicy: Always
+        image: jjaku/ai_advanced_givemesomecredit_api:v1
+      restartPolicy: Never
+  backoffLimit: 0
